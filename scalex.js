@@ -1,5 +1,3 @@
-var scalexProd = /scalex\.org/.test(document.domain);
-
 $(function () {
 
   var $form = $("form.search-form");
@@ -8,8 +6,6 @@ $(function () {
   var $resultTpl = $("#result-template");
   var $greetings = $(".greetings");
   var xhr;
-
-  if (!scalexProd) $form.attr("data-url", "http://api.scalex.local");
 
   // put request query in the search input
   if (query = getParameterByName("q")) $input.val(query);
