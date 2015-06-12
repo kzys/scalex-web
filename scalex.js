@@ -77,12 +77,8 @@ $(function () {
       url: $form.attr("data-url"),
       data: {
         q: query,
-        callback: "scalex_jc",
         page: options.page
       },
-      dataType: "jsonp",
-      jsonp: false,
-      jsonpCallback: "scalex_jc",
       cache: true,
       success: function (data) {
         if (data.error) var html = "<div class=\"status error\">" + nl2br(data.error) + "</pre>";
